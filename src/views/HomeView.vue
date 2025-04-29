@@ -39,7 +39,7 @@ const sortedMovies = computed(() => movies.value?.filter((movie) =>
         includes(filter.value.toLowerCase())))
 
 const getMovies = async() => {
-    const url = "http://localhost:4000/movies"
+    const url = "http://localhost:4000/api/movies"
 
     fetch(url).
         then(res => res.json()).

@@ -58,7 +58,7 @@ const openEditForm = () => {
 }
 
 const editMovie = async () => {
-    const url = `http://localhost:4000/movies/${paramsId.value}`
+    const url = `http://localhost:4000/api/movies/${paramsId.value}`
 
     const movieData = {
         title: title.value ? title.value : movie.value?.title,
@@ -92,7 +92,7 @@ const editMovie = async () => {
 }
 
 const deleteMovie = async () => {
-    const url = `http://localhost:4000/movies/${paramsId.value}`
+    const url = `http://localhost:4000/api/movies/${paramsId.value}`
 
     const response = await fetch(url, {
         method: 'DELETE',
@@ -110,7 +110,7 @@ const deleteMovie = async () => {
 }
 
 const getMovieDetails = async () => {
-    const url = `http://localhost:4000/movies/${paramsId.value}`
+    const url = `http://localhost:4000/api/movies/${paramsId.value}`
 
     fetch(url).
         then(res => res.json()).
